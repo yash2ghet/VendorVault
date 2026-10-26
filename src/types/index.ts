@@ -1,0 +1,61 @@
+export enum UserRole {
+  ADMIN = "ADMIN",
+  MANAGER = "MANAGER",
+  STAFF = "STAFF",       // employee
+  SUPPLIER = "SUPPLIER", // external vendor login
+}
+
+export enum VendorStatus {
+  ACTIVE = "ACTIVE",
+  INACTIVE = "INACTIVE",
+}
+
+export enum VerificationStatus {
+  PENDING = "PENDING",
+  VERIFIED = "VERIFIED",
+  FLAGGED = "FLAGGED",
+  SUSPENDED = "SUSPENDED",
+}
+
+export enum OrderStatus {
+  DRAFT = "DRAFT",
+  PENDING = "PENDING",
+  CONFIRMED = "CONFIRMED",
+  SHIPPED = "SHIPPED",
+  DELIVERED = "DELIVERED",
+  CANCELLED = "CANCELLED",
+}
+
+export enum PaymentStatus {
+  UNPAID = "UNPAID",
+  PARTIAL = "PARTIAL",
+  PAID = "PAID",
+  REFUNDED = "REFUNDED",
+}
+
+export enum AuditAction {
+  USER_CREATE = "USER_CREATE",
+  USER_UPDATE = "USER_UPDATE",
+  USER_DELETE = "USER_DELETE",
+  VENDOR_CREATE = "VENDOR_CREATE",
+  VENDOR_UPDATE = "VENDOR_UPDATE",
+  VENDOR_VERIFY = "VENDOR_VERIFY",
+  VENDOR_SUSPEND = "VENDOR_SUSPEND",
+  BRAND_CREATE = "BRAND_CREATE",
+  BRAND_UPDATE = "BRAND_UPDATE",
+  CATEGORY_CREATE = "CATEGORY_CREATE",
+  CATEGORY_UPDATE = "CATEGORY_UPDATE",
+  PRODUCT_CREATE = "PRODUCT_CREATE",
+  PRODUCT_UPDATE = "PRODUCT_UPDATE",
+  PO_CREATE = "PO_CREATE",
+  PO_APPROVED = "PO_APPROVED",
+  PO_CANCELLED = "PO_CANCELLED",
+  LOW_STOCK_ALERT = "LOW_STOCK_ALERT",
+}
+
+export interface ComplianceDocument {
+  name: string;
+  fileUrl: string;
+  uploadedAt: Date;
+  verified: boolean;
+}
